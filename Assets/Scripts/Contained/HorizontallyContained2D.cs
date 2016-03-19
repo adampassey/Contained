@@ -2,9 +2,9 @@
 
 namespace Contained {
 
-    [AddComponentMenu("Contained/HorizontallyContained")]
+    [AddComponentMenu("Contained/HorizontallyContained2D")]
     [RequireComponent(typeof(Collider2D))]
-    public class HorizontallyContained : MonoBehaviour {
+    public class HorizontallyContained2D : MonoBehaviour {
 
         /// <summary>
         /// The collider component attached to
@@ -59,12 +59,12 @@ namespace Contained {
         }
 
         private void notifyOfContain(Collider2D other) {
-            gameObject.SendMessage("OnContain", other);
+            gameObject.SendMessage("OnHorizontalContain", other);
             isContained = true;
         }
 
         private void notifyOfExit(Collider2D other) {
-            gameObject.SendMessage("OnExit", other);
+            gameObject.SendMessage("OnHorizontalExit", other);
             isContained = false;
         }
     }
