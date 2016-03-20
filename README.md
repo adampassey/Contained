@@ -22,13 +22,13 @@ using Contained;
 
 namespace Example {
 
-    public class ContainedListener : MonoBehaviour, IHorizontallyContainedDelegate {
+    public class ContainedListener : MonoBehaviour, IHorizontallyContained2DDelegate {
 
-        public void OnContain(Collider2D other) {
+        public void OnHorizontalContain(Collider2D other) {
             Debug.Log("Listener notified of containment!");
         }
 
-        public void OnExit(Collider2D other) {
+        public void OnHorizontalExit(Collider2D other) {
             Debug.Log("Listener notified of exit!");
         }
     }
